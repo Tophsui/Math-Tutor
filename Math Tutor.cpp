@@ -15,13 +15,22 @@ int main() {
     cout << "Solve the following problem:" << endl;
     cout << num1 << " + " << num2 << " = ?" << endl;
 
-    // Pause for the student to work on the problem
-    cout << "Press any key to see the correct answer..." << endl;
-    cin.get();  // Wait for the user to press a key
+    // Get the student's answer
+    int studentAnswer;
+    cout << "Enter your answer: ";
+    cin >> studentAnswer;
 
-    // Calculate and display the correct answer
+    // Calculate the correct answer
     int correctAnswer = num1 + num2;
+
+    // Display the correct answer and check if the student's answer is correct
     cout << num1 << " + " << num2 << " = " << correctAnswer << endl;
+    if (studentAnswer == correctAnswer) {
+        cout << "You are correct!" << endl;
+    }
+    else {
+        cout << "Your answer is not correct." << endl;
+    }
 
     return 0;
 }
